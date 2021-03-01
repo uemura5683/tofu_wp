@@ -1,0 +1,79 @@
+/***********
+color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
+***********/
+
+  /************
+  faundation
+  ************/
+
+  /** 
+  * reset
+  **/
+  body {
+    /*opacity: 0;*/
+    background-color: white !important;
+  }
+  * {
+    color: #333;
+  }
+  body, div, p, span, input, textarea, ul, li, ol, a {
+    font-size: 14px;
+  }
+  ul li, ol li {
+    list-style-type: none;
+  }
+  .container, .keyBig, .l-wrapper {
+    max-width: 1230px;
+    width: 100%;
+  }
+  a {
+    opacity: 1;
+    transition: .3s opacity ease;
+  }
+  a:hover {
+    opacity: .7;
+    transition: .3s opacity ease;
+  }
+  img {
+    width: 100%;
+  }
+  .visible-phone {
+    display: none;
+  }
+  .hidden-phone {
+    display: block;
+  }
+  .visible-desktop {
+    display: block;    
+  }
+  .hidden-desktop {
+    display: none;
+  }
+  input, textarea, button {
+    outline: none;
+  }
+  @media only screen and (max-width: 1230px) {
+    .container, .keyBig, .l-wrapper {
+      width: calc( 100% - 30px );
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    .visible-desktop {
+      display: none;    
+    }
+    .hidden-desktop {
+      display: block;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .l-wrapper {
+      margin: 15px !important;
+    }
+    .visible-phone {
+      display: block;
+    }
+    .hidden-phone {
+      display: none;
+    }
+  }
+  
