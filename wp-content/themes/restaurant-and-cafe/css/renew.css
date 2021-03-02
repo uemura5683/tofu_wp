@@ -76,4 +76,21 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
       display: none;
     }
   }
-  
+  /**
+  * header
+  **/
+  .header-inner {
+    background-color: #6D5458;
+  }
+  .header-inner * {
+    color: white;
+  }
+  .site-footer {
+    background-color: #6D5458;
+  }
+  .site-footer * {
+    color: white;
+  }
+  /**
+  * footer
+  **/
