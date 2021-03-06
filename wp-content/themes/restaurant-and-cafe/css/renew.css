@@ -52,6 +52,29 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   input, textarea, button {
     outline: none;
   }
+  .txt-center {
+    text-align: center;
+  }
+  figure {
+    margin: 0;
+  }
+  /**
+  * table
+  **/
+  .wp-block-table table {
+    border: 0px solid #cccccc;
+    border-top-width: 1px;
+  }
+  .wp-block-table table tr {
+    border: 0px solid #cccccc;
+    border-bottom-width: 1px;
+    background-color: white;
+  }
+  #primary .post .entry-content table tbody tr:nth-child(2n),
+  #primary .page .entry-content table tbody tr:nth-child(2n) {
+    background: white;
+  }
+
   @media only screen and (max-width: 1230px) {
     .container, .keyBig, .l-wrapper {
       width: calc( 100% - 30px );
@@ -79,18 +102,56 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   /**
   * header
   **/
+
   .header-inner {
     background-color: #6D5458;
+    padding: 10px 0;
   }
   .header-inner * {
     color: white;
+    display: flex;
+    flex-wrap: wrap;
   }
+  .main-navigation {
+    float: none;
+    align-items: center;
+    margin-left: auto;
+    position: relative;
+  }
+  .main-navigation ul li {
+    margin-left: 30px;
+  }
+  .main-navigation ul li a {
+    padding: 0;
+  }
+  .main-navigation ul li a:after {
+    content: '▼';
+    margin: 0 0 0 5px;
+  }
+  .main-navigation .current_page_item>a,
+  .main-navigation .current-menu-item>a,
+  .main-navigation .current_page_ancestor>a,
+  .main-navigation .current-menu-ancestor>a {
+    color: white;
+  }
+  .main-navigation ul:after {
+    content: none;
+  }
+
+
+  /**
+  * footer
+  **/
   .site-footer {
     background-color: #6D5458;
   }
   .site-footer * {
     color: white;
   }
+
   /**
-  * footer
+  * 製作者
   **/
+  .owner_message {
+    margin: 50px 0;
+  }
