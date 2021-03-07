@@ -22,11 +22,11 @@
 		<header class="entry-header">
 		<?php the_title( sprintf( '<h2 class="entry-title" itemprop="headline"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
+		<?php /* if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php restaurant_and_cafe_posted_on(); ?>
 		</div><!-- .entry-meta -->
-		<?php endif; ?>
+		<?php endif; */ ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content" itemprop="text">
@@ -34,7 +34,7 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php echo '<a href="' . esc_url( get_the_permalink() ) . '" class="btn-green">'; ?>
+		<?php echo '<a href="' . esc_url( get_the_permalink() ) . '" class="btn-purple">'; ?>
 		<?php esc_html_e( 'Read More', 'restaurant-and-cafe' );?>
 		<?php echo'</a>' ;?> 
 		<?php restaurant_and_cafe_entry_footer(); ?>

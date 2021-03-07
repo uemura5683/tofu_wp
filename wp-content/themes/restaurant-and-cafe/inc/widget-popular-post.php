@@ -70,7 +70,7 @@ class Restaurant_and_Cafe_Popular_Post extends WP_Widget {
                         <?php } ?>
                         <div class="entry-header">
                             <h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h3>
-                            <?php if( $show_date  ){?>
+                            <?php /* if( $show_date  ){?>
                                 <div class="entry-meta">
                                     <span class="posted-on">
                                         <a href="<?php the_permalink(); ?>">
@@ -78,7 +78,7 @@ class Restaurant_and_Cafe_Popular_Post extends WP_Widget {
                                         </a>                                    
                                     </span>
                                 </div>
-                            <?php }?>
+                            <?php } */?>
                         </div>                        
                     </li>        
                 <?php    

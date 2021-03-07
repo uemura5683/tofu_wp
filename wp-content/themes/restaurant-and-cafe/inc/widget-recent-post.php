@@ -69,13 +69,13 @@ class Restaurant_and_Cafe_Recent_Post extends WP_Widget {
                         <?php } ?>
                         <div class="entry-header">
                             <h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h3>
-                            <?php if( $show_date ) { ?>
+                            <?php /* if( $show_date ) { ?>
                                 <div class="entry-meta">
                                     <span class="posted-on"><a href="<?php the_permalink(); ?>">
                                         <time datetime="<?php echo esc_attr( get_the_date('Y-m-d') ); ?>"><?php echo esc_html( get_the_date('F j, Y') ); ?></time></a>
                                     </span>
                                 </div>
-                            <?php } ?>
+                            <?php } */ ?>
                         </div>                        
                     </li>        
                 <?php    

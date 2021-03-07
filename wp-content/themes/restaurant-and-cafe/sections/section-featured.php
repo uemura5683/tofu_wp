@@ -84,7 +84,7 @@
             }
         ?>
     <?php  if($restaurant_and_cafe_button_url && $restaurant_and_cafe_button_text ){ ?>
-        <a href="<?php echo esc_url( $restaurant_and_cafe_button_url ); ?>" class="btn-green"><?php echo esc_html( $restaurant_and_cafe_button_text ); ?></a>
+        <a href="<?php echo esc_url( $restaurant_and_cafe_button_url ); ?>" class="btn-purple"><?php echo esc_html( $restaurant_and_cafe_button_text ); ?></a>
     <?php } ?>
     </div>
 </div>
