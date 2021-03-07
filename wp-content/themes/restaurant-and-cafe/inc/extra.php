@@ -428,7 +428,7 @@ $restaurant_and_cafe_banner_read_more  = get_theme_mod( 'restaurant_and_cafe_ban
                     <div class="text">
                       <strong class="title"><?php the_title(); ?></strong>
                       <?php the_excerpt(); ?>
-                        <a href="<?php the_permalink(); ?> " class="btn-green"><?php echo esc_html( $restaurant_and_cafe_banner_read_more ); ?></a>
+                        <a href="<?php the_permalink(); ?> " class="btn-purple"><?php echo esc_html( $restaurant_and_cafe_banner_read_more ); ?></a>
                     </div>
                     </div>
                     </div>
