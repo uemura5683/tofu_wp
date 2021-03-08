@@ -1443,7 +1443,7 @@ function edit_post_link( $text = null, $before = '', $after = '', $id = 0, $clas
 	 * @param int    $post_id Post ID.
 	 * @param string $text    Anchor text.
 	 */
-	echo $before . apply_filters( 'edit_post_link', $link, $post->ID, $text ) . $after;
+	// echo $before . apply_filters( 'edit_post_link', $link, $post->ID, $text ) . $after;
 }
 
 /**
