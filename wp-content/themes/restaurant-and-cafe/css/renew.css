@@ -9,7 +9,7 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   /** 
   * reset
   **/
-  body {
+  body, .site {
     /*opacity: 0;*/
     background-color: white !important;
   }
@@ -113,6 +113,9 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   .widget ul li a:hover {
     color: #6D5458;
   }
+  .widget .widget-title:after {
+    width: 100%;
+  }
 
   /**
   * btn
@@ -213,4 +216,18 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   **/
   .owner_message {
     margin: 50px 0;
+  }
+
+  /**
+  * 詳細ページ
+  **/
+  .comment-form input[type="submit"] {
+    background-color: #6D5458;
+  }
+
+  /**
+  * search
+  **/
+  .search .search-form {
+    width : 100%;
   }
