@@ -238,17 +238,13 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   /**
   * archive-page
   **/
-  #primary.archive-page .post .post-thumbnail,
-  #primary.archive-page .page .post-thumbnail {
-    display: block;
-    height: auto;
-    margin: 0 0 10px;
-  }
   #primary.archive-page .post .entry-header {
     width: 100%;
+    order: 2;
   }
   #primary.archive-page .post .entry-header .entry-title {
     margin: 0 0 10px;
+    line-height: 1;
   }
   #primary.archive-page .site-main {
     display: flex;
@@ -256,6 +252,20 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   }
   #primary.archive-page .page-header {
     width: 100%;
+  }
+  #primary.archive-page .page-title {
+    font-size: 24px;    
+  }
+  #primary.archive-page .page-title span {
+    font-size: 24px;
+    margin: 0 0 0 5px;
+  }
+  #primary.archive-page .post .post-thumbnail,
+  #primary.archive-page .page .post-thumbnail {
+    display: block;
+    height: auto;
+    margin: 0 0 10px;
+    order: 1;
   }
   #primary.archive-page .post .entry-meta {
     margin: 5px;
@@ -271,4 +281,11 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   }
   #primary.archive-page .site-main .entry-content {
     width : 100%;
+    order: 3;
+  }
+  #primary.archive-page .site-main .entry-footer {
+    order: 4;
+  }
+  #primary.archive-page  .post .entry-header .entry-title a:hover {
+    color: #6D5458;
   }
