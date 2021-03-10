@@ -175,7 +175,7 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
     padding: 0;
   }
   .main-navigation ul li a:after {
-    content: '▼';
+    content: 'â–¼';
     margin: 0 0 0 5px;
   }
   .main-navigation .current_page_item>a,
@@ -268,4 +268,7 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   }
   #primary.archive-page .site-main article p {
     margin-bottom: 0.5em;
+  }
+  #primary.archive-page .site-main .entry-content {
+    width : 100%;
   }

@@ -10,15 +10,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php echo ( !is_single() ) ? '<a href="' . esc_url( get_the_permalink() ) . '" class="post-thumbnail">' : '<div class="post-thumbnail">'; ?>
- 			<?php ( is_active_sidebar( 'right-sidebar' ) ) ? the_post_thumbnail( 'restaurant-and-cafe-with-sidebar', array( 'itemprop' => 'image' ) ) : the_post_thumbnail( 'restaurant-and-cafe-without-sidebar', array( 'itemprop' => 'image' ) ) ; ?>
-    <?php echo ( !is_single() ) ? '</a>' : '</div>' ;?>
-		<?php /* if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php restaurant_and_cafe_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; */ ?>
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
@@ -28,7 +19,16 @@
 			}
 		?>
 	</header><!-- .entry-header -->
-    <div class="entry-content" itemprop="text">
+	<?php echo ( !is_single() ) ? '<a href="' . esc_url( get_the_permalink() ) . '" class="post-thumbnail">' : '<div class="post-thumbnail">'; ?>
+ 			<?php ( is_active_sidebar( 'right-sidebar' ) ) ? the_post_thumbnail( 'restaurant-and-cafe-with-sidebar', array( 'itemprop' => 'image' ) ) : the_post_thumbnail( 'restaurant-and-cafe-without-sidebar', array( 'itemprop' => 'image' ) ) ; ?>
+    <?php echo ( !is_single() ) ? '</a>' : '</div>' ;?>
+		<?php /* if ( 'post' === get_post_type() ) : ?>
+		<div class="entry-meta">
+			<?php restaurant_and_cafe_posted_on(); ?>
+		</div><!-- .entry-meta -->
+		<?php
+		endif; */ ?>
+	<div class="entry-content" itemprop="text">
 		<?php
 			if( is_single() ){
 			the_content( sprintf(
