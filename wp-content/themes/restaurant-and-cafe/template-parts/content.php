@@ -10,15 +10,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-			if ( is_single() ) {
-				the_title( '<h1 class="entry-title" itemprop="headline">', '</h1>' );
-			} else {
-				the_title( '<h2 class="entry-title" itemprop="headline"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			}
-		?>
-	</header><!-- .entry-header -->
 	<?php echo ( !is_single() ) ? '<a href="' . esc_url( get_the_permalink() ) . '" class="post-thumbnail">' : '<div class="post-thumbnail">'; ?>
  			<?php ( is_active_sidebar( 'right-sidebar' ) ) ? the_post_thumbnail( 'restaurant-and-cafe-with-sidebar', array( 'itemprop' => 'image' ) ) : the_post_thumbnail( 'restaurant-and-cafe-without-sidebar', array( 'itemprop' => 'image' ) ) ; ?>
     <?php echo ( !is_single() ) ? '</a>' : '</div>' ;?>
@@ -28,7 +19,16 @@
 		</div><!-- .entry-meta -->
 		<?php
 		endif; */ ?>
-	<div class="entry-content" itemprop="text">
+	<header class="entry-header">
+		<?php
+			if ( is_single() ) {
+				the_title( '<h1 class="entry-title" itemprop="headline">', '</h1>' );
+			} else {
+				the_title( '<h2 class="entry-title" itemprop="headline"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			}
+		?>
+	</header><!-- .entry-header -->
+    <div class="entry-content" itemprop="text">
 		<?php
 			if( is_single() ){
 			the_content( sprintf(
