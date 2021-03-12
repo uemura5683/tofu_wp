@@ -76,9 +76,15 @@ $restaurant_and_cafe_enabled_sections = restaurant_and_cafe_get_sections();
 			</div>
    	
 	<?php } 
-	echo '<div id="acc-content">';
 	
-	$ed_section         = restaurant_and_cafe_get_sections();
+	if( is_home() ) {
+		echo '<div id="acc-content" class="top-content">';
+	} else {
+		echo '<div id="acc-content">';
+	}
+
+	
+	$ed_section  = restaurant_and_cafe_get_sections();
 
     if( is_home() || ! $ed_section  || ! ( is_front_page() || is_page_template( 'template-home.php' ) ) ){
 		echo '<div class = "container"><div id="content" class="site-content"><div class = "row">';

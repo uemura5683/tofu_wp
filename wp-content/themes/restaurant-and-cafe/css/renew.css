@@ -103,11 +103,6 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   }
 
   /**
-  * components
-  **/
-
-
-  /**
   * widget
   **/
   .widget ul li a:hover {
@@ -115,6 +110,13 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   }
   .widget .widget-title:after {
     width: 100%;
+  }
+
+  /**
+  * card
+  **/
+  .edit-link {
+    display: none;
   }
 
   /**
@@ -140,6 +142,13 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
     }
   }
 
+
+  /**
+  * search
+  **/
+  .search .search-form {
+    width : 100%;
+  }
 
   /**
   * header
@@ -212,22 +221,71 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   }
 
   /**
-  * 製作者
+  * owner
   **/
   .owner_message {
     margin: 50px 0;
   }
 
   /**
-  * 詳細ページ
+  * detail
   **/
+  .comment-form input[type="submit"]:hover,
   .comment-form input[type="submit"] {
     background-color: #6D5458;
   }
 
   /**
-  * search
+  * archive-page
   **/
-  .search .search-form {
+  #primary.archive-page .post .entry-header {
+    width: 100%;
+    order: 2;
+  }
+  #primary.archive-page .post .entry-header .entry-title {
+    margin: 0 0 10px;
+    line-height: 1;
+  }
+  #primary.archive-page .site-main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #primary.archive-page .page-header {
+    width: 100%;
+  }
+  #primary.archive-page .page-title {
+    font-size: 24px;    
+  }
+  #primary.archive-page .page-title span {
+    font-size: 24px;
+    margin: 0 0 0 5px;
+  }
+  #primary.archive-page .post .post-thumbnail,
+  #primary.archive-page .page .post-thumbnail {
+    display: block;
+    height: auto;
+    margin: 0 0 10px;
+    order: 1;
+  }
+  #primary.archive-page .post .entry-meta {
+    margin: 5px;
+  }
+  #primary.archive-page .site-main article {
+    width: calc(50% - 10px);
+    margin: 0 5px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #primary.archive-page .site-main article p {
+    margin-bottom: 0.5em;
+  }
+  #primary.archive-page .site-main .entry-content {
     width : 100%;
+    order: 3;
+  }
+  #primary.archive-page .site-main .entry-footer {
+    order: 4;
+  }
+  #primary.archive-page  .post .entry-header .entry-title a:hover {
+    color: #6D5458;
   }
