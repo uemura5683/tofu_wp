@@ -66,7 +66,12 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   .full-container .container {
     width: 100%;
     max-width: none;
+    padding: 0;
   }
+  .full-container .container #content {
+    padding: 0;
+  }
+
   @media only screen and (max-width: 1230px) {
     .container, .keyBig, .l-wrapper {
       width: calc( 100% - 30px );
@@ -230,10 +235,21 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   }
   #primary.index-page #mainvisual {
     width: 100%;
+    margin: 0;
+  }
+  #primary.index-page section {
+    margin: 0;
+  }
+  #primary.index-page section .gallery {
+    margin-bottom: 0;
+  }
+  #primary.index-page section .gallery-item {
+    margin-bottom: 0;
   }
   #primary.index-page main.site-main {
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
   }
   #primary.index-page main.site-main article {
     width: calc(100% / 6);
