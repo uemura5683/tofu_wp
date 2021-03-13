@@ -18,9 +18,9 @@ get_header(); ?>
 
 			<header class="page-header">
 				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'restaurant-and-cafe' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-					<?php
-						get_search_form();
-					?>
+				<?php
+					/*get_search_form();*/
+				?>
 			</header><!-- .page-header -->
 
 			<?php

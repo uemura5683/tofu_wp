@@ -150,6 +150,15 @@ add_action( 'template_redirect', 'restaurant_and_cafe_template_redirect_content_
  */
 function restaurant_and_cafe_widgets_init() {
 	register_sidebar( array(
+		'name'          => esc_html__( 'MainVisual', 'restaurant-and-cafe' ),
+		'id'            => 'mainbisual',
+		'description'   => '',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
 		'name'          => esc_html__( 'Right Sidebar', 'restaurant-and-cafe' ),
 		'id'            => 'right-sidebar',
 		'description'   => '',

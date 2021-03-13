@@ -65,24 +65,8 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   **/
   .full-container .container {
     width: 100%;
+    max-width: none;
   }
-  /**
-  * table
-  **/
-  .wp-block-table table {
-    border: 0px solid #cccccc;
-    border-top-width: 1px;
-  }
-  .wp-block-table table tr {
-    border: 0px solid #cccccc;
-    border-bottom-width: 1px;
-    background-color: white;
-  }
-  #primary .post .entry-content table tbody tr:nth-child(2n),
-  #primary .page .entry-content table tbody tr:nth-child(2n) {
-    background: white;
-  }
-
   @media only screen and (max-width: 1230px) {
     .container, .keyBig, .l-wrapper {
       width: calc( 100% - 30px );
@@ -107,7 +91,26 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
       display: none;
     }
   }
+  /**
+  * conponents
+  **/
 
+  /**
+  * table
+  **/
+  .wp-block-table table {
+    border: 0px solid #cccccc;
+    border-top-width: 1px;
+  }
+  .wp-block-table table tr {
+    border: 0px solid #cccccc;
+    border-bottom-width: 1px;
+    background-color: white;
+  }
+  #primary .post .entry-content table tbody tr:nth-child(2n),
+  #primary .page .entry-content table tbody tr:nth-child(2n) {
+    background: white;
+  }
   /**
   * widget
   **/
@@ -225,14 +228,24 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   #primary.index-page {
     width : 100%;
   }
-
-  /**
-  * owner
-  **/
-  .owner_message {
-    margin: 50px 0;
+  #primary.index-page #mainvisual {
+    width: 100%;
   }
-
+  #primary.index-page main.site-main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #primary.index-page main.site-main article {
+    width: calc(100% / 6);
+    margin: 0;
+    padding: 0;
+  }
+  #primary.index-page main.site-main article a {
+    margin: 0;
+  }
+  #primary.index-page main.site-main article .post-thumbnail {
+    height: auto;
+  }
   /**
   * detail
   **/
@@ -240,7 +253,6 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   .comment-form input[type="submit"] {
     background-color: #6D5458;
   }
-
   /**
   * archive-page
   **/
@@ -294,4 +306,10 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   }
   #primary.archive-page  .post .entry-header .entry-title a:hover {
     color: #6D5458;
+  }
+  /**
+  * owner page
+  **/
+  .owner_message {
+    margin: 50px 0;
   }

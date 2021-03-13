@@ -10,6 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if( !is_home() ) { ?>
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
@@ -19,6 +20,7 @@
 			}
 		?>
 	</header><!-- .entry-header -->
+	<?php } ?>
 	<?php echo ( !is_single() ) ? '<a href="' . esc_url( get_the_permalink() ) . '" class="post-thumbnail">' : '<div class="post-thumbnail">'; ?>
  			<?php ( is_active_sidebar( 'right-sidebar' ) ) ? the_post_thumbnail( 'restaurant-and-cafe-with-sidebar', array( 'itemprop' => 'image' ) ) : the_post_thumbnail( 'restaurant-and-cafe-without-sidebar', array( 'itemprop' => 'image' ) ) ; ?>
     <?php echo ( !is_single() ) ? '</a>' : '</div>' ;?>
@@ -28,6 +30,7 @@
 		</div><!-- .entry-meta -->
 		<?php
 		endif; */ ?>
+    <?php if( !is_home() ) { ?>
 	<div class="entry-content" itemprop="text">
 		<?php
 			if( is_single() ){
@@ -45,8 +48,8 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
-	<?php if( !is_single() ){ ?>			
+	<?php } ?>
+	<?php if( !(is_single() || is_home()) ){ ?>			
 		<footer class="entry-footer"><!-- .entry-footer -->
 				<div class="continue-btn">
 				<span>
@@ -55,8 +58,9 @@
 				</div>
 		</footer>
 	<?php } ?>
-
+    <?php if( !is_home() ) { ?>
 	<footer class="entry-footer">
 		<?php restaurant_and_cafe_entry_footer(); ?>        		
 	</footer><!-- .entry-footer -->
+	<?php } ?>
 </article><!-- #post-## -->
