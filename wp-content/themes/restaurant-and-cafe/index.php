@@ -17,6 +17,9 @@ get_header(); ?>
 	<div id="primary" class="content-area index-page">
 		<main id="main" class="site-main" role="main">
 
+		<div id="mainvisual">
+			<?php dynamic_sidebar( 'mainbisual' ); ?>
+		</div>
 		<?php
 		if ( have_posts() ) :
 

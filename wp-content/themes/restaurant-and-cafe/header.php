@@ -76,11 +76,11 @@ $restaurant_and_cafe_enabled_sections = restaurant_and_cafe_get_sections();
 			</div>
    	
 	<?php } 
-	
+
 	if( is_home() ) {
-		echo '<div id="acc-content" class="top-content">';
+		echo '<div id="acc-content" class="full-container">';
 	} else {
-		echo '<div id="acc-content">';
+		echo '<div id="acc-content" class="second-container">';
 	}
 
 	
