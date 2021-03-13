@@ -61,6 +61,12 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
     margin: 0;
   }
   /**
+  * layout
+  **/
+  .full-container .container {
+    width: 100%;
+  }
+  /**
   * table
   **/
   .wp-block-table table {
