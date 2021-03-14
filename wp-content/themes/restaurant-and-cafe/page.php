@@ -16,7 +16,7 @@ $sidebar_layout = restaurant_and_cafe_sidebar_layout();
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area page-index">
 		<main id="main" class="site-main" role="main">
 
 			<?php
