@@ -578,11 +578,13 @@ function restaurant_and_cafe_footer_credit(){
             echo esc_html__( 'Copyright &copy; ', 'restaurant-and-cafe' ) . date_i18n( esc_html__( 'Y', 'restaurant-and-cafe' ) ); ?> 
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>.  
         <?php } ?>
+        <?php /*
         <span class="by">
         <?php echo esc_html__( 'Restaurant And Cafe | Developed By', 'restaurant-and-cafe' ); ?>
         <a href="<?php echo esc_url( 'https://rarathemes.com/' ); ?>" rel="nofollow" target="_blank"><?php echo esc_html__( 'Rara Theme', 'restaurant-and-cafe' ); ?></a>.
         <?php printf( esc_html__( 'Powered by %s', 'restaurant-and-cafe' ), '<a href="'. esc_url( __( 'https://wordpress.org/', 'restaurant-and-cafe' ) ) .'" target="_blank">WordPress.</a>' ); ?>
         </span>
+        */ ?>
         <?php  
             if ( function_exists( 'the_privacy_policy_link' ) ) {
                 the_privacy_policy_link( '<span class="policy_link">', '</span>');

@@ -163,10 +163,6 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   .search .search-form {
     width : 100%;
   }
-  .widget_search .search-form {
-    background: transparent;
-    border-bottom: 1px solid black;
-  }
 
   /**
   * header
@@ -226,9 +222,20 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   **/
   .site-footer {
     background-color: #6D5458;
+    padding: 0;
   }
   .site-footer * {
     color: white;
+  }
+  .site-footer .site-info {
+    padding: 10px;
+    text-align: right;
+  }
+  .site-footer .footer-t {
+    border: none;
+  }
+  .site-footer .footer-t .col-3:empty {
+    margin: 0;
   }
 
   /**
@@ -249,9 +256,6 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   }
   #primary.index-page section .gallery-item {
     margin-bottom: 0;
-  }
-  #primary.index-page section .gallery-icon {
-    line-height: 0;
   }
   #primary.index-page main.site-main {
     display: flex;
