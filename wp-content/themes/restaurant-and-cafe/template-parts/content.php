@@ -6,7 +6,10 @@
  *
  * @package Restaurant_and_Cafe
  */
-
+ $cat_code = null;
+ if( is_category() ) {
+   $cat_code = $wp_query->get_queried_object()->category_nicename;
+ }
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -24,12 +27,7 @@
 	<?php echo ( !is_single() ) ? '<a href="' . esc_url( get_the_permalink() ) . '" class="post-thumbnail">' : '<div class="post-thumbnail">'; ?>
  			<?php ( is_active_sidebar( 'right-sidebar' ) ) ? the_post_thumbnail( 'restaurant-and-cafe-with-sidebar', array( 'itemprop' => 'image' ) ) : the_post_thumbnail( 'restaurant-and-cafe-without-sidebar', array( 'itemprop' => 'image' ) ) ; ?>
     <?php echo ( !is_single() ) ? '</a>' : '</div>' ;?>
-		<?php /* if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php restaurant_and_cafe_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; */ ?>
+
     <?php if( !is_home() ) { ?>
 	<div class="entry-content" itemprop="text">
 		<?php
@@ -53,7 +51,15 @@
 		<footer class="entry-footer"><!-- .entry-footer -->
 				<div class="continue-btn">
 				<span>
-					<a href="<?php the_permalink(); ?>" class="read-more"><?php echo esc_html__( 'Read More', 'restaurant-and-cafe' ); ?></a>
+					<a href="<?php the_permalink(); ?>" class="read-more">
+					  <?php
+						if( $cat_code === 'tofulist') {
+							echo '詳細はこちら';
+						} else {
+							echo esc_html__( 'Read More', 'restaurant-and-cafe' );
+						}
+					  ?>
+				    </a>
 				</span>
 				</div>
 		</footer>
