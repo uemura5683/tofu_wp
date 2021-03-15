@@ -14,8 +14,4 @@ if ( ! is_active_sidebar( 'right-sidebar' ) ) {
 
 <aside id="secondary" class="widget-area" role="complementary" itemscope itemtype="https://schema.org/WPSideBar">
 	<?php dynamic_sidebar( 'right-sidebar' ); ?>
-	<?php /*
-	<h2 class="widget-title">メニュー</h2>
-	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-	*/ ?>
 </aside><!-- #secondary -->
