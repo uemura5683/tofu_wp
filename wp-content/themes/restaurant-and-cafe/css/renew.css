@@ -250,12 +250,32 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   }
   #primary.index-page section {
     margin: 0;
+    position: relative;
+  }
+  #primary.index-page section .widget-title {
+    position: absolute;
+    color: white;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    font-size: 2.4vw;
+    transform: translateY(50%);
+    left: 10%;
+    z-index: 1;
+    text-shadow: 1px 1px 3px black;
+  }
+  #primary.index-page section .widget-title:after {
+    background: transparent;
   }
   #primary.index-page section .gallery {
     margin-bottom: 0;
   }
   #primary.index-page section .gallery-item {
     margin-bottom: 0;
+  }
+  #primary.index-page section .gallery-item img {
+    opacity: .8;
   }
   #primary.index-page main.site-main {
     display: flex;
