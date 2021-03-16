@@ -7,11 +7,21 @@
  * @package Restaurant_and_Cafe
  */
 
+$cat_code = null;
+if( is_category() ) {
+  $cat_code = $wp_query->get_queried_object()->category_nicename;
+}
+
 get_header(); ?>
 
 	<div id="primary" class="content-area archive-page">
 		<main id="main" class="site-main" role="main">
 
+		<?php if( $cat_code == 'tofulist' ): ?>
+		<div id="mainvisual">
+			<?php dynamic_sidebar( 'tofuCategory' ); ?>
+		</div>
+		<?php endif; ?>
 		<?php
 		if ( have_posts() ) : ?>
 
