@@ -11,17 +11,24 @@ $cat_code = null;
 if( is_category() ) {
   $cat_code = $wp_query->get_queried_object()->category_nicename;
 }
+$contents_name = null;
+if($cat_code == 'tofulist') {
+ $contents_name = 'tofuCategory';
+} else {
+ $contents_name = 'infoCategory';
+}
 
 get_header(); ?>
 
-	<div id="primary" class="content-area archive-page">
-		<main id="main" class="site-main" role="main">
+<?php if( isset($contents_name) ): ?>
+  <div id="mainvisual">
+    <?php dynamic_sidebar( $contents_name ); ?>
+  </div>
+<?php endif; ?>
 
-		<?php if( $cat_code == 'tofulist' ): ?>
-		<div id="mainvisual">
-			<?php dynamic_sidebar( 'tofuCategory' ); ?>
-		</div>
-		<?php endif; ?>
+	<div id="primary" class="content-area archive-page">
+
+		<main id="main" class="site-main" role="main">
 		<?php
 		if ( have_posts() ) : ?>
 
