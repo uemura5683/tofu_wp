@@ -309,7 +309,8 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   * archive-page
   **/
   #mainvisual.categories {
-    margin: 0 15px;
+    margin: 0 auto;
+    max-width: 1200px;
   }
   #mainvisual.categories .widget_media_image {
     position: relative;
