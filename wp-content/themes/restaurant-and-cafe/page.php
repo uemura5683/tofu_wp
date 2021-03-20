@@ -13,9 +13,10 @@
  */
 
 $sidebar_layout = restaurant_and_cafe_sidebar_layout();
+get_header();
+?>
 
-get_header(); ?>
-
+<div class="thumb-container">
 	<div id="primary" class="content-area page-index">
 		<main id="main" class="site-main" role="main">
 
@@ -31,11 +32,9 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	<?php if( $sidebar_layout == 'right-sidebar' ) get_sidebar(); ?>
+</div>
 
-<?php
-if( $sidebar_layout == 'right-sidebar' )
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

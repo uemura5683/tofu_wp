@@ -7,8 +7,9 @@
  * @package Restaurant_and_Cafe
  */
 
-get_header(); ?>
-
+get_header();
+?>
+<div class="thumb-container">
 	<div id="primary" class="content-area single-page">
 		<main id="main" class="site-main" role="main">
 
@@ -36,7 +37,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+	<?php get_sidebar(); ?>
+</div>
+<?php get_footer(); ?>
