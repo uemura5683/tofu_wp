@@ -7,25 +7,27 @@
  * @package Restaurant_and_Cafe
  */
 
-$cat_code = null;
-if( is_category() ) {
-  $cat_code = $wp_query->get_queried_object()->category_nicename;
-}
-$contents_name = null;
-if($cat_code == 'tofulist') {
- $contents_name = 'tofuCategory';
-} else {
- $contents_name = 'infoCategory';
-}
+$cat_code = null; $contents_name = null;
 
-get_header(); ?>
+if( is_category() ) {
+    $cat_code = $wp_query->get_queried_object()->category_nicename;
+}
+if($cat_code == 'tofulist') {
+    $contents_name = 'tofuCategory';
+} else {
+    $contents_name = 'infoCategory';
+}
+get_header();
+
+?>
 
 <?php if( isset($contents_name) ): ?>
-  <div id="mainvisual">
+  <div id="mainvisual" class="categories">
     <?php dynamic_sidebar( $contents_name ); ?>
   </div>
 <?php endif; ?>
 
+<div class="thumb-container">
 	<div id="primary" class="content-area archive-page">
 
 		<main id="main" class="site-main" role="main">
@@ -66,7 +68,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	<?php get_sidebar(); ?>
+</div>
 
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>
