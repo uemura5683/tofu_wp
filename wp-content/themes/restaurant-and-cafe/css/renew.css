@@ -100,6 +100,13 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
     margin: 0 auto;
     overflow: hidden;
   }
+  /**
+  * container
+  **/
+  #primary .post, #primary .page {
+    background: none;
+    padding: 0;
+  }
 
   @media only screen and (max-width: 1230px) {
     .container, .keyBig, .l-wrapper {
@@ -133,6 +140,7 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   * table
   **/
   .wp-block-table table {
+    margin: 50px 0 0;
     border: 0px solid #cccccc;
     border-top-width: 1px;
   }
