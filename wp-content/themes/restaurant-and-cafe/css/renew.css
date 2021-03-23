@@ -100,6 +100,13 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
     margin: 0 auto;
     overflow: hidden;
   }
+  /**
+  * container
+  **/
+  #primary .post, #primary .page {
+    background: none;
+    padding: 0;
+  }
 
   @media only screen and (max-width: 1230px) {
     .container, .keyBig, .l-wrapper {
@@ -133,6 +140,7 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   * table
   **/
   .wp-block-table table {
+    margin: 50px 0 0;
     border: 0px solid #cccccc;
     border-top-width: 1px;
   }
@@ -260,8 +268,22 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
     content: none;
   }
   @media only screen and (max-width: 767px) {
+    .header-inner .container {
+      overflow: hidden;
+    }
+    #menu-opener {
+      background-color: transparent;
+      border: none;
+    }
     .header-inner {
-      height: 80px;
+      height: 50px;
+    }
+    .header-inner .container {
+      padding: 0;
+    }
+    .header-inner img {
+      height: 30px;
+      width: auto;
     }
   }
   /**
@@ -349,6 +371,22 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   }
   #primary.index-page main.site-main article .post-thumbnail {
     height: auto;
+  }
+  @media only screen and (max-width: 767px) {
+    #primary.index-page section .widget-title {
+      line-height: 1;
+    }
+    #primary.index-page main.site-main article {
+      width: calc(100% / 2 - 15px);
+      margin: 0 0 10px;
+      padding: 0;
+    }
+    #primary.index-page main.site-main article:nth-child(2n - 1) {
+      margin: 0 10px 10px 5px;
+    }
+    #primary.index-page main.site-main article:nth-child(2n - 2) {
+      margin: 0 5px 10px 10px;
+    }
   }
   /**
   * detail
