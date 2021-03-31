@@ -84,6 +84,7 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   figure {
     margin: 0;
   }
+
   /**
   * layout
   **/
@@ -99,6 +100,11 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
+  }
+  @media only screen and (max-width: 767px) {
+    .full-container .row {
+      margin: 0;
+    }
   }
   /**
   * container
@@ -162,14 +168,12 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   .widget .widget-title:after {
     width: 100%;
   }
-
   /**
   * card
   **/
   .edit-link {
     display: none;
   }
-
   /**
   * btn
   **/
@@ -192,8 +196,6 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
       width: 100%;
     }
   }
-
-
   /**
   * search
   **/
@@ -213,6 +215,19 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
     background-size: 20px;
     margin: 0;
   }
+  /**
+  * title
+  **/
+  @media only screen and (max-width: 767px) {
+    #primary .post .entry-header .entry-title {
+      font-size: 18px;
+      margin: 0 0 13px;
+    }
+    .comments-area .comments-title, .comments-area .comment-reply-title {
+      font-size: 18px;
+    }
+  }
+
 
   /**
   * header
@@ -312,6 +327,7 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   **/
   #primary.index-page {
     width : 100%;
+    padding: 0;
   }
   #primary.index-page #mainvisual {
     width: 100%;
@@ -348,10 +364,11 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
     background: transparent;
   }
   #primary.index-page section .gallery {
-    margin-bottom: 0;
+    margin: 0;
   }
   #primary.index-page section .gallery-item {
     margin-bottom: 0;
+    padding: 0;
   }
   #primary.index-page section .gallery-item img {
     opacity: .8;
@@ -387,13 +404,6 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
     #primary.index-page main.site-main article:nth-child(2n - 2) {
       margin: 0 5px 10px 10px;
     }
-  }
-  /**
-  * detail
-  **/
-  .comment-form input[type="submit"]:hover,
-  .comment-form input[type="submit"] {
-    background-color: #6D5458;
   }
   /**
   * archive-page
@@ -481,6 +491,18 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   #primary.archive-page  .post .entry-header .entry-title a:hover {
     color: #6D5458;
   }
+  @media only screen and (max-width: 767px) {
+    #mainvisual.categories .widget_media_image {
+      padding: 0;
+    }
+    #mainvisual.categories .widget_media_image img {
+      top: 0;
+      position: relative;
+    }
+    #mainvisual.categories .widget_media_image .widget-title {
+      transform: translateX(0px);
+    }
+  }
   /**
   * single page
   **/
@@ -513,6 +535,38 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   }
   #mainvisual.single .wp-block-image img {
     opacity: .8;
+  }
+  .comment-form input[type="submit"] {
+    background-color: #6D5458;
+    border: 1px solid #6D5458;
+  }
+  .comment-form input[type="submit"]:hover{
+    background-color: white;
+    color: #6D5458;
+    border: 1px solid #6D5458;
+  }
+  @media only screen and (max-width: 767px) {
+    #primary.single-page {
+       margin: 25px 0;
+    }
+    .comment-form textarea, .comment-form input[type="text"], .comment-form input[type="email"], .comment-form input[type="url"] {
+      padding: 7px;
+      font-size: 12px;
+    }
+    .comment-form input[type="submit"]:hover,
+    .comment-form input[type="submit"] {
+      width :100%;
+    }
+    .comments-area .comment-form .comment-form-cookies-consent {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .comments-area .comment-form .comment-form-cookies-consent input[type="checkbox"] {
+      margin-top: 6px;
+    }
+    .comments-area .comment-form label[for="wp-comment-cookies-consent"] {
+      width: calc(100% - 20px);
+    }
   }
   /**
   * search page
