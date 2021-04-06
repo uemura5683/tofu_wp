@@ -17,6 +17,12 @@
         </div>
     <?php } ?>
 
+    <?php if( ( is_home() || is_page_template( 'template-home.php' ) ) && function_exists( 'has_custom_logo' ) && has_custom_logo() ): ?>
+        <div id="animaton_bg">
+        <?php the_custom_logo();?>
+        </div>
+    <?php endif; ?>
+
 	<footer id="colophon" class="site-footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
       		<div class="widget-area">
 				<div class="container">

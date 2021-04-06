@@ -454,6 +454,37 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   #primary.index-page main.site-main article .post-thumbnail {
     height: auto;
   }
+
+  /* animation */
+  #animaton_bg {
+    -webkit-animation: .5s linear infinite fadein-keyframes 4s;
+            animation: .5s linear infinite fadein-keyframes 4s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    position: fixed;
+    background-color: #6D5458;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    opacity: 1;
+  }
+  #animaton_bg.access {
+    display: none;
+    -webkit-animation: none;
+            animation: none;
+  }
+  #animaton_bg  img {
+    width: 241px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
   @media only screen and (max-width: 767px) {
     #primary.index-page section .widget-title {
       line-height: 1;
@@ -675,4 +706,13 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   @keyframes fadeIn {
     0% { opacity: 0; left:0%; }
     100% { opacity: 1; left:10%; }
+  }
+
+  @keyframes fadein-keyframes {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    background-color: transparent;
+    z-index: -1; }
   }
