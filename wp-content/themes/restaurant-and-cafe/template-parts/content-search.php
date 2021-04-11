@@ -13,7 +13,7 @@
 	<?php 
 	echo '<a href="' . esc_url( get_the_permalink() ) . '" class="post-thumbnail">'; 
 		if ( has_post_thumbnail() ) {
-			the_post_thumbnail( 'restaurant-and-cafe-search-thumbnail', array( 'itemprop' => 'image' ) ); 
+			the_post_thumbnail( 'full'); 
 		}else{
 			restaurant_and_cafe_get_fallback_svg( 'restaurant-and-cafe-search-thumbnail' );
 		}
