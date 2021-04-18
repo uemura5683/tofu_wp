@@ -25,7 +25,9 @@
 	</header><!-- .entry-header -->
 	<?php } ?>
 	<?php echo ( !is_single() ) ? '<a href="' . esc_url( get_the_permalink() ) . '" class="post-thumbnail">' : '<div class="post-thumbnail">'; ?>
- 			<?php ( is_active_sidebar( 'right-sidebar' ) ) ? the_post_thumbnail( 'restaurant-and-cafe-with-sidebar', array( 'itemprop' => 'image' ) ) : the_post_thumbnail( 'restaurant-and-cafe-without-sidebar', array( 'itemprop' => 'image' ) ) ; ?>
+			 <?php ( is_active_sidebar( 'right-sidebar' ) )
+						 ? the_post_thumbnail( 'restaurant-and-cafe-with-sidebar', array( 'itemprop' => 'image' ) )
+						 : the_post_thumbnail( 'restaurant-and-cafe-without-sidebar', array( 'itemprop' => 'image' ) ) ; ?>
     <?php echo ( !is_single() ) ? '</a>' : '</div>' ;?>
 
     <?php if( !is_home() ) { ?>

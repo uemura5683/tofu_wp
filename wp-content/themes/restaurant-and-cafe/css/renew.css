@@ -267,8 +267,6 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
       font-size: 18px;
     }
   }
-
-
   /**
   * header
   **/
@@ -326,6 +324,9 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   #menu-opener span,
   #menu-opener:after {
     height: 2px;
+  }
+  .overlay {
+    background: rgba(255, 255, 255, 0.8);
   }
   @media only screen and (max-width: 767px) {
     .header-inner .container {
@@ -420,7 +421,7 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
     margin: 0;
     padding: 0;
     top: 50%;
-    font-size: 1.8vw;
+    font-size: 3.0vw;
     transform: translateY(50%);
     left: 0%;
     z-index: 1;
@@ -491,7 +492,7 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
     -webkit-animation: none;
             animation: none;
   }
-  #animaton_bg  img {
+  #animaton_bg img {
     width: 241px;
     position: fixed;
     top: 50%;
@@ -515,6 +516,10 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
     }
     #primary.index-page main.site-main article:nth-child(2n - 2) {
       margin: 0 5px 10px 10px;
+    }
+    #animaton_bg img {
+      width: auto;
+      height: 30px;
     }
   }
   /**
@@ -590,7 +595,7 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   }
   #primary.archive-page .site-main article {
     width: calc(50% - 10px);
-    margin: 0 5px;
+    margin: 0 5px 20px;
     display: flex;
     flex-wrap: wrap;
   }
