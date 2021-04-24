@@ -18,7 +18,6 @@ if($cat_code == 'tofulist') {
     $contents_name = 'infoCategory';
 }
 get_header();
-
 ?>
 
 <?php if( isset($contents_name) ): ?>

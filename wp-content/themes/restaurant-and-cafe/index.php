@@ -12,7 +12,8 @@
  * @package Restaurant_and_Cafe
  */
 
-get_header(); ?>
+get_header();
+?>
 
 	<div id="primary" class="content-area index-page">
 		<main id="main" class="site-main" role="main">
