@@ -702,7 +702,11 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   }
   @media only screen and (max-width: 767px) {
     #primary.single-page {
-       margin: 25px 0;
+       margin: 25px 0 0;
+    }
+    #primary.single-page .post,
+    #primary.single-page .page {
+      margin: 0;
     }
     .comment-form textarea, .comment-form input[type="text"], .comment-form input[type="email"], .comment-form input[type="url"] {
       padding: 7px;
