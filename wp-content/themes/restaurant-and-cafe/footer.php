@@ -56,5 +56,23 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<script type="text/javascript">
+    let top_animation_bg  = document.getElementById( 'animaton_bg' )
+        , top_title       = document.querySelector('#mainvisual .widget_media_gallery')
+        , access          = 'access'
+    if( top_animation_bg ) {
+    var webStorage = function() {
+        if( sessionStorage.getItem ( access ) ) {
+            top_animation_bg.classList.add( access );
+            top_title.classList.add( access )
+
+        } else {
+            sessionStorage.setItem( access, 0 );
+        }
+    }
+        webStorage();
+    }
+</script>
+
 </body>
 </html>
