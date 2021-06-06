@@ -21,41 +21,44 @@ get_header();
 		<div id="mainvisual">
 			<?php dynamic_sidebar( 'mainbisual' ); ?>
 		</div>
-		<?php
-		if ( have_posts() ) :
+		<div class="main-gallery">
+			<div class="main-gallery-inner">
+				<div class="autoplay-slider">
+				<?php
+				for ($i = 1; $i <= 2; $i++) {
+					if ( have_posts() ) :
+						if ( is_home() && ! is_front_page() ) : ?>
+							<header>
+								<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+							</header>
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+						<?php
+						endif;
+						/* Start the Loop */
+						while ( have_posts() ) : the_post();
 
-			<?php
-			endif;
+							/*
+							* Include the Post-Format-specific template for the content.
+							* If you want to override this in a child theme, then include a file
+							* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+							*/
+							get_template_part( 'template-parts/content', get_post_format() );
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+						endwhile;
+						the_posts_pagination( array(
+							'mid_size'  => 2,
+							'prev_text' => '<span class="fa fa-angle-double-left"></span>',
+							'next_text' => '<span class="fa fa-angle-double-right"></span>',
+						) ); 
+					else :
+						get_template_part( 'template-parts/content', 'none' );
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_pagination( array(
-				'mid_size'  => 2,
-				'prev_text' => '<span class="fa fa-angle-double-left"></span>',
-				'next_text' => '<span class="fa fa-angle-double-right"></span>',
-			) ); 
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
+					endif;
+				}
+				?>
+				</div>
+			</div>
+		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
