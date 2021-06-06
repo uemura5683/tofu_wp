@@ -91,8 +91,6 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
       display: none;
     }
   }
-
-
   /************
   layout
   ************/
@@ -240,6 +238,11 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
     height: 20px;
     background-size: 20px;
     margin: 0;
+  }
+  .pagination .current, .pagination a:hover, .pagination a:hover svg path {
+    border: 1px solid #6D5458;
+    background: #6D5458;
+    color: white;
   }
   @media only screen and (max-width: 767px) {
     .widget_search .search-form {
@@ -710,9 +713,17 @@ color dcleam #FEF5EC; cleam #FFF0E0; gold #B1963B; wgray #FEFEFE; gray #666666;
   #mainvisual.single .wp-block-image img {
     opacity: .8;
   }
+  .comment-form input[type="text"], .comment-form input[type="email"], .comment-form input[type="url"] {
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 14px;
+    padding: 8px 15px;
+  }
   .comment-form input[type="submit"] {
     background-color: #6D5458;
     border: 1px solid #6D5458;
+    appearance: none;
+    -webkit-appearance: none;
   }
   .comment-form input[type="submit"]:hover{
     background-color: white;
