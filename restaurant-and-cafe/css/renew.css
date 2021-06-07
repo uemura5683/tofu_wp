@@ -500,7 +500,6 @@ module
     transform: translateX(-50%);
   }
 }
-
 #animaton_bg {
   -webkit-animation: .5s linear infinite fadein-keyframes 4s;
           animation: .5s linear infinite fadein-keyframes 4s;
@@ -539,11 +538,13 @@ module
   #primary.index-page .main-gallery {
     margin: 0 0 5px;
   }
+  #primary.index-page .main-gallery-inner .autoplay-slider {
+  }
   #primary.index-page main.site-main article {
-    width: 150px;
+    width: 250px;
     margin: 0;
     padding: 0;
-    height: 71px;
+    height: 119px;
   }
   #animaton_bg img {
     width: auto;
