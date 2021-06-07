@@ -688,7 +688,13 @@ module
 * single page
 **/
 #primary.single-page {
-  margin: 50px 0;
+  margin: 50px 20px 50px 0;
+  border: 1px solid lightgray;
+  padding: 26px 20px 0;
+  width: calc(75% - 20px);
+}
+#primary.single-page .site-main {
+  padding: 0;
 }
 #primary.single-page + #secondary {
   margin: 50px 0;
@@ -738,7 +744,8 @@ module
 }
 @media only screen and (max-width: 767px) {
   #primary.single-page {
-    margin: 25px 0;
+    margin: 25px 10px 0;
+    width: calc(100% - 20px);
   }
   .comment-form textarea,
   .comment-form input[type="text"],
