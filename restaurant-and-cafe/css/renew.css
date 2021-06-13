@@ -181,6 +181,9 @@ conponents
 .widget ul li a:hover {
   color: #6D5458;
 }
+.widget .widget-title {
+  font-size: 18px;
+}
 .widget .widget-title:after {
   width: 100%;
   height: 1px;
@@ -190,7 +193,7 @@ conponents
   .widget .widget-title {
     margin: 20px 0;
     padding: 0 0 10px;
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 /**
@@ -216,6 +219,13 @@ conponents
   width: 300px;
   text-align: center;
   font-weight: normal;
+  border: 1px solid #6D5458;
+}
+.btn-purple:hover {
+  text-decoration: none;
+  color: #6D5458 !important;
+  background: white;
+  border: 1px solid #6D5458;
 }
 @media only screen and (max-width: 767px) {
   .btn-purple {
