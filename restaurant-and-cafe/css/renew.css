@@ -328,7 +328,7 @@ conponents
   height: 2px;
 }
 .overlay {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.7);
 }
 @media only screen and (max-width: 1024px) {
   .header-inner .container {
